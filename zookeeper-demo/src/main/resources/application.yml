@@ -1,0 +1,19 @@
+server:
+  port: 9081
+  servlet:
+    context-path: /zookeeper-demo
+spring:
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 50MB
+  profiles:
+    active: @profile.name@
+logging:
+  file:
+    path: D://middlewarelog/app/
+  level:
+    root: info
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss.SSS} %thread %level [%c{0}] %m%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss.SSS} %thread %level [%c{0}] %m%n"
